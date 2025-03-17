@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Popup from '../components/Popup';
 import AspirasiBox from '../components/AspirasiBox';
 import CommentSection from '../components/CommentSection';
@@ -43,20 +43,19 @@ export default function Home() {
         {currentPage === 'home' && (
           <div className="home">
             <div style={{ position: 'relative', width: '100px', height: '100px', position: 'fixed', top: '20px', left: '20px' }}>
-              <Image 
-                src="/assets/Logo_SMAN 24.png" 
-                alt="Logo SMAN 24" 
-                layout="fill" 
-                objectFit="contain" 
-                className="logo logo-left" 
-              />
+            <Image 
+              src="/assets/Logo_SMAN 24.png" 
+              alt="Logo SMAN 24" 
+              fill style={{ objectFit: "contain" }} 
+              className="logo logo-left" 
+            />
+
             </div>
             <div style={{ position: 'relative', width: '100px', height: '100px', position: 'fixed', top: '20px', right: '20px' }}>
               <Image 
                 src="/assets/Logo_MPK.png" 
                 alt="Logo MPK" 
-                layout="fill" 
-                objectFit="contain" 
+                fill style={{ objectFit: "contain" }} 
                 className="logo logo-right" 
               />
             </div>
