@@ -258,7 +258,7 @@ export default function Home() {
             </div>
 
             <div className="container">
-              <button className="button page-button" onClick={() => showPage('home', '/assets/1.png')}>
+              <button className="button page-button" onClick={() => showPage('home', 'public/assets/1.png')}>
                 Kembali ke Home
               </button>
             </div>
