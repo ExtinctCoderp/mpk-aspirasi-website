@@ -40,29 +40,24 @@ export default function Home() {
         {/* Home Page */}
         {currentPage === 'home' && (
           <div className="home">
-            <div style={{ position: 'relative', width: '100px', height: '100px', position: 'fixed', top: '20px', left: '20px' }}>
-            <Image
-              src="/assets/Logo_SMAN 24.png"
-              alt="Logo SMAN 24"
-              fill
-              className="logo logo-left"
-              style={{
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
-
+            <div style={{ width: '100px', height: '100px', position: 'fixed', top: '20px', left: '20px' }}>
+              <Image
+                src="/assets/Logo_SMAN 24.png"
+                alt="Logo SMAN 24"
+                fill
+                className="logo logo-left"
+                style={{
+                  objectFit: "contain"
+                }} />
             </div>
-            <div style={{ position: 'relative', width: '100px', height: '100px', position: 'fixed', top: '20px', right: '20px' }}>
+            <div style={{ width: '100px', height: '100px', position: 'fixed', top: '20px', right: '20px' }}>
               <Image
                 src="/assets/Logo_MPK.png"
                 alt="Logo MPK"
                 fill
                 className="logo logo-right"
                 style={{
-                  objectFit: "contain",
-                  maxWidth: "100%",
-                  height: "auto"
+                  objectFit: "contain"
                 }} />
             </div>
             
@@ -291,7 +286,7 @@ export default function Home() {
             </div>
 
             <div className="container">
-              <button className="button page-button" onClick={() => showPage('home', 'public/assets/1.png')}>
+              <button className="button page-button" onClick={() => showPage('home', '/assets/1.png')}>
                 Kembali ke Home
               </button>
             </div>
