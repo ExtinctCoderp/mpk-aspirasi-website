@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Popup from '../components/Popup';
 import AspirasiBox from '../components/AspirasiBox';
 import CommentSection from '../components/CommentSection';
@@ -35,29 +35,35 @@ export default function Home() {
         <meta name="description" content="Website Aspirasi MPK SMAN 24 Bandung" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div className="background" style={{ backgroundImage: `url('${background}')` }}></div>
-
       <div className="page-wrapper">
         {/* Home Page */}
         {currentPage === 'home' && (
           <div className="home">
             <div style={{ position: 'relative', width: '100px', height: '100px', position: 'fixed', top: '20px', left: '20px' }}>
-            <Image 
-              src="/assets/Logo_SMAN 24.png" 
-              alt="Logo SMAN 24" 
-              fill style={{ objectFit: "contain" }} 
-              className="logo logo-left" 
-            />
+            <Image
+              src="/assets/Logo_SMAN 24.png"
+              alt="Logo SMAN 24"
+              fill
+              className="logo logo-left"
+              style={{
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
+              }} />
 
             </div>
             <div style={{ position: 'relative', width: '100px', height: '100px', position: 'fixed', top: '20px', right: '20px' }}>
-              <Image 
-                src="/assets/Logo_MPK.png" 
-                alt="Logo MPK" 
-                fill style={{ objectFit: "contain" }} 
-                className="logo logo-right" 
-              />
+              <Image
+                src="/assets/Logo_MPK.png"
+                alt="Logo MPK"
+                fill
+                className="logo logo-right"
+                style={{
+                  objectFit: "contain",
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
             
             <h1 className="header pressstart2p">MPK SMAN 24 BANDUNG</h1>
@@ -79,24 +85,28 @@ export default function Home() {
 
             <div className="social-buttons">
               <div style={{ position: 'relative', width: '50px', height: '50px', cursor: 'pointer' }}>
-                <Image 
-                  src="/assets/instagram_logo.png" 
-                  alt="Instagram" 
-                  layout="fill" 
-                  objectFit="contain" 
-                  className="social-button" 
+                <Image
+                  src="/assets/instagram_logo.png"
+                  alt="Instagram"
+                  className="social-button"
                   onClick={() => window.open('https://www.instagram.com/mpk_sman24bdg?igsh=MWNlaTBmMXA0Z2E5MQ==', '_blank')}
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "contain"
+                  }} />
               </div>
               <div style={{ position: 'relative', width: '50px', height: '50px', cursor: 'pointer' }}>
-                <Image 
-                  src="/assets/youtube_logo.png" 
-                  alt="YouTube" 
-                  layout="fill" 
-                  objectFit="contain" 
-                  className="social-button" 
+                <Image
+                  src="/assets/youtube_logo.png"
+                  alt="YouTube"
+                  className="social-button"
                   onClick={() => window.open('https://youtube.com/@mpksman24bandung65?si=uGyKN8wO5-luLouR', '_blank')}
-                />
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "contain"
+                  }} />
               </div>
             </div>
           </div>
@@ -114,24 +124,30 @@ export default function Home() {
                 Menyalurkan minat dan bakat bagi siswa melalui pengadaan lomba
               </div>
               <div className="pohon-image">
-                <Image 
-                  src="/assets/content_1.png" 
-                  alt="Pohon Aspirasi Image" 
-                  width={600} 
-                  height={400} 
-                />
+                <Image
+                  src="/assets/content_1.png"
+                  alt="Pohon Aspirasi Image"
+                  width={600}
+                  height={400}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <div className="image-caption glow-white">Wakasek Kurikulum</div>
               </div>
             </div>
 
             <div className="pohon-section">
               <div className="pohon-image">
-                <Image 
-                  src="/assets/content_2.png" 
-                  alt="Pohon Aspirasi Image" 
-                  width={600} 
-                  height={400} 
-                />
+                <Image
+                  src="/assets/content_2.png"
+                  alt="Pohon Aspirasi Image"
+                  width={600}
+                  height={400}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <div className="image-caption glow-white">Wakasek Kurikulum</div>
               </div>
               <div className="pohon-text pressstart2p">
@@ -144,24 +160,30 @@ export default function Home() {
                 Pengoptimalan program P5
               </div>
               <div className="pohon-image">
-                <Image 
-                  src="/assets/content_3.png" 
-                  alt="Pohon Aspirasi Image" 
-                  width={600} 
-                  height={400} 
-                />
+                <Image
+                  src="/assets/content_3.png"
+                  alt="Pohon Aspirasi Image"
+                  width={600}
+                  height={400}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <div className="image-caption glow-white">Wakasek Kurikulum</div>
               </div>
             </div>
 
             <div className="pohon-section">
               <div className="pohon-image">
-                <Image 
-                  src="/assets/content_4.png" 
-                  alt="Pohon Aspirasi Image" 
-                  width={600} 
-                  height={400} 
-                />
+                <Image
+                  src="/assets/content_4.png"
+                  alt="Pohon Aspirasi Image"
+                  width={600}
+                  height={400}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <div className="image-caption glow-white">Wakasek Sarpa</div>
               </div>
               <div className="pohon-text pressstart2p">
@@ -174,24 +196,30 @@ export default function Home() {
                 Perbaikan Keramik Pada Tangga
               </div>
               <div className="pohon-image">
-                <Image 
-                  src="/assets/content_5.png" 
-                  alt="Pohon Aspirasi Image" 
-                  width={600} 
-                  height={400} 
-                />
+                <Image
+                  src="/assets/content_5.png"
+                  alt="Pohon Aspirasi Image"
+                  width={600}
+                  height={400}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <div className="image-caption glow-white">Wakasek Sarpa</div>
               </div>
             </div>
 
             <div className="pohon-section">
               <div className="pohon-image">
-                <Image 
-                  src="/assets/content_6.png" 
-                  alt="Pohon Aspirasi Image" 
-                  width={600} 
-                  height={400} 
-                />
+                <Image
+                  src="/assets/content_6.png"
+                  alt="Pohon Aspirasi Image"
+                  width={600}
+                  height={400}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <div className="image-caption glow-white">Wakasek Sarpa</div>
               </div>
               <div className="pohon-text pressstart2p">
@@ -204,24 +232,30 @@ export default function Home() {
                 Pengadaan 3 Jenis Tempat Sampah
               </div>
               <div className="pohon-image">
-                <Image 
-                  src="/assets/content_7.png" 
-                  alt="Pohon Aspirasi Image" 
-                  width={600} 
-                  height={400} 
-                />
+                <Image
+                  src="/assets/content_7.png"
+                  alt="Pohon Aspirasi Image"
+                  width={600}
+                  height={400}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <div className="image-caption glow-white">Wakasek Sarpa</div>
               </div>
             </div>
 
             <div className="pohon-section">
               <div className="pohon-image">
-                <Image 
-                  src="/assets/content_8.png" 
-                  alt="Pohon Aspirasi Image" 
-                  width={600} 
-                  height={400} 
-                />
+                <Image
+                  src="/assets/content_8.png"
+                  alt="Pohon Aspirasi Image"
+                  width={600}
+                  height={400}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <div className="image-caption glow-white">Wakasek Kurikulum</div>
               </div>
               <div className="pohon-text pressstart2p">

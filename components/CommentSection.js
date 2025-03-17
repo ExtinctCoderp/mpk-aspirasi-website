@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function CommentSection() {
   const [comments, setComments] = useState([]);
@@ -44,13 +44,15 @@ export default function CommentSection() {
             <div key={index} className="comment-box">
               <div className="comment">
                 <div className="logo-reply" style={{ position: 'relative', width: '40px', height: '40px' }}>
-                  <Image 
-                    src="/assets/radupat.png" 
-                    alt="Radupat" 
-                    layout="fill" 
-                    objectFit="cover" 
-                    style={{ borderRadius: '50%' }} 
-                  />
+                  <Image
+                    src="/assets/radupat.png"
+                    alt="Radupat"
+                    fill
+                    sizes="100vw"
+                    style={{
+                      borderRadius: '50%',
+                      objectFit: "cover"
+                    }} />
                 </div>
                 <strong>Radupat:</strong> {comment.aspirasi}
               </div>
@@ -58,21 +60,25 @@ export default function CommentSection() {
               {comment.respon && comment.respon.map((reply, replyIndex) => (
                 <div key={replyIndex} className="reply-container">
                   <div className="arrow" style={{ position: 'relative', width: '40px', height: '40px' }}>
-                    <Image 
-                      src="/assets/arrow.png" 
-                      alt="Arrow" 
-                      layout="fill" 
-                      objectFit="contain" 
-                    />
+                    <Image
+                      src="/assets/arrow.png"
+                      alt="Arrow"
+                      fill
+                      sizes="100vw"
+                      style={{
+                        objectFit: "contain"
+                      }} />
                   </div>
                   <div className="logo-reply" style={{ position: 'relative', width: '40px', height: '40px' }}>
-                    <Image 
-                      src="/assets/mpk.png" 
-                      alt="MPK" 
-                      layout="fill" 
-                      objectFit="cover" 
-                      style={{ borderRadius: '50%' }} 
-                    />
+                    <Image
+                      src="/assets/mpk.png"
+                      alt="MPK"
+                      fill
+                      sizes="100vw"
+                      style={{
+                        borderRadius: '50%',
+                        objectFit: "cover"
+                      }} />
                   </div>
                   <strong>MPK:</strong> {reply}
                 </div>
