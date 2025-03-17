@@ -41,22 +41,24 @@ export default function Home() {
         {currentPage === 'home' && (
           <div className="home">
             <div style={{ width: '100px', height: '100px', position: 'fixed', top: '20px', left: '20px' }}>
-              <Image
+              <img
                 src="/assets/Logo_SMAN 24.png"
                 alt="Logo SMAN 24"
-                fill
                 className="logo logo-left"
                 style={{
+                  width: "100%",
+                  height: "100%",
                   objectFit: "contain"
                 }} />
             </div>
             <div style={{ width: '100px', height: '100px', position: 'fixed', top: '20px', right: '20px' }}>
-              <Image
+              <img
                 src="/assets/Logo_MPK.png"
                 alt="Logo MPK"
-                fill
                 className="logo logo-right"
                 style={{
+                  width: "100%",
+                  height: "100%",
                   objectFit: "contain"
                 }} />
             </div>
@@ -80,26 +82,26 @@ export default function Home() {
 
             <div className="social-buttons">
               <div style={{ position: 'relative', width: '50px', height: '50px', cursor: 'pointer' }}>
-                <Image
+                <img
                   src="/assets/instagram_logo.png"
                   alt="Instagram"
                   className="social-button"
                   onClick={() => window.open('https://www.instagram.com/mpk_sman24bdg?igsh=MWNlaTBmMXA0Z2E5MQ==', '_blank')}
-                  fill
-                  sizes="100vw"
                   style={{
+                    width: "100%",
+                    height: "100%",
                     objectFit: "contain"
                   }} />
               </div>
               <div style={{ position: 'relative', width: '50px', height: '50px', cursor: 'pointer' }}>
-                <Image
+                <img
                   src="/assets/youtube_logo.png"
                   alt="YouTube"
                   className="social-button"
                   onClick={() => window.open('https://youtube.com/@mpksman24bandung65?si=uGyKN8wO5-luLouR', '_blank')}
-                  fill
-                  sizes="100vw"
                   style={{
+                    width: "100%",
+                    height: "100%",
                     objectFit: "contain"
                   }} />
               </div>
@@ -119,11 +121,9 @@ export default function Home() {
                 Menyalurkan minat dan bakat bagi siswa melalui pengadaan lomba
               </div>
               <div className="pohon-image">
-                <Image
+                <img
                   src="/assets/content_1.png"
                   alt="Pohon Aspirasi Image"
-                  width={600}
-                  height={400}
                   style={{
                     maxWidth: "100%",
                     height: "auto"
@@ -134,11 +134,9 @@ export default function Home() {
 
             <div className="pohon-section">
               <div className="pohon-image">
-                <Image
+                <img
                   src="/assets/content_2.png"
                   alt="Pohon Aspirasi Image"
-                  width={600}
-                  height={400}
                   style={{
                     maxWidth: "100%",
                     height: "auto"
@@ -155,11 +153,9 @@ export default function Home() {
                 Pengoptimalan program P5
               </div>
               <div className="pohon-image">
-                <Image
+                <img
                   src="/assets/content_3.png"
                   alt="Pohon Aspirasi Image"
-                  width={600}
-                  height={400}
                   style={{
                     maxWidth: "100%",
                     height: "auto"
@@ -170,11 +166,9 @@ export default function Home() {
 
             <div className="pohon-section">
               <div className="pohon-image">
-                <Image
+                <img
                   src="/assets/content_4.png"
                   alt="Pohon Aspirasi Image"
-                  width={600}
-                  height={400}
                   style={{
                     maxWidth: "100%",
                     height: "auto"
@@ -191,11 +185,9 @@ export default function Home() {
                 Perbaikan Keramik Pada Tangga
               </div>
               <div className="pohon-image">
-                <Image
+                <img
                   src="/assets/content_5.png"
                   alt="Pohon Aspirasi Image"
-                  width={600}
-                  height={400}
                   style={{
                     maxWidth: "100%",
                     height: "auto"
@@ -206,11 +198,9 @@ export default function Home() {
 
             <div className="pohon-section">
               <div className="pohon-image">
-                <Image
+                <img
                   src="/assets/content_6.png"
                   alt="Pohon Aspirasi Image"
-                  width={600}
-                  height={400}
                   style={{
                     maxWidth: "100%",
                     height: "auto"
@@ -227,11 +217,9 @@ export default function Home() {
                 Pengadaan 3 Jenis Tempat Sampah
               </div>
               <div className="pohon-image">
-                <Image
+                <img
                   src="/assets/content_7.png"
                   alt="Pohon Aspirasi Image"
-                  width={600}
-                  height={400}
                   style={{
                     maxWidth: "100%",
                     height: "auto"
@@ -242,11 +230,9 @@ export default function Home() {
 
             <div className="pohon-section">
               <div className="pohon-image">
-                <Image
+                <img
                   src="/assets/content_8.png"
                   alt="Pohon Aspirasi Image"
-                  width={600}
-                  height={400}
                   style={{
                     maxWidth: "100%",
                     height: "auto"
