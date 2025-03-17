@@ -42,7 +42,7 @@ export default function Home() {
           <div className="home">
             <div style={{ width: '100px', height: '100px', position: 'fixed', top: '20px', left: '20px' }}>
               <img
-                src="/assets/Logo_SMAN 24.png"
+                src="/assets/Logo_MPK.png"
                 alt="Logo SMAN 24"
                 className="logo logo-left"
                 style={{
