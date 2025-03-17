@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Popup from '../components/Popup';
 import AspirasiBox from '../components/AspirasiBox';
 import CommentSection from '../components/CommentSection';
