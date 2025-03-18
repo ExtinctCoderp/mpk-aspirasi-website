@@ -37,50 +37,57 @@ export default function CommentSection() {
     <div className="comment-section">
       <h3>Comment Section</h3>
       <div id="comments">
-        {comments.length === 0 ? (
+        {/* Add a fallback empty array if comments is undefined or null */}
+        {(comments ?? []).length === 0 ? (
           <p>Belum ada komentar</p>
         ) : (
-          comments.map((comment, index) => (
+          // Safely map over comments
+          (comments ?? []).map((comment, index) => (
             <div key={index} className="comment-box">
               <div className="comment">
-                <div className="logo-reply" style={{ position: 'relative', width: '40px', height: '40px' }}>
+                <div className="logo-reply">
                   <Image
                     src="/assets/radupat.png"
                     alt="Radupat"
-                    fill
-                    sizes="100vw"
+                    width={40}
+                    height={40}
                     style={{
                       borderRadius: '50%',
                       objectFit: "cover"
                     }} />
                 </div>
-                <strong>Radupat:</strong> {comment.aspirasi}
+                <div>
+                  <strong>Radupat:</strong> {comment.aspirasi}
+                </div>
               </div>
               
-              {comment.respon && comment.respon.map((reply, replyIndex) => (
+              {/* Safely map over replies */}
+              {(comment.respon ?? []).map((reply, replyIndex) => (
                 <div key={replyIndex} className="reply-container">
-                  <div className="arrow" style={{ position: 'relative', width: '40px', height: '40px' }}>
+                  <div className="arrow">
                     <Image
                       src="/assets/arrow.png"
                       alt="Arrow"
-                      fill
-                      sizes="100vw"
+                      width={30}
+                      height={30}
                       style={{
                         objectFit: "contain"
                       }} />
                   </div>
-                  <div className="logo-reply" style={{ position: 'relative', width: '40px', height: '40px' }}>
+                  <div className="logo-reply">
                     <Image
                       src="/assets/mpk.png"
                       alt="MPK"
-                      fill
-                      sizes="100vw"
+                      width={40}
+                      height={40}
                       style={{
                         borderRadius: '50%',
                         objectFit: "cover"
                       }} />
                   </div>
-                  <strong>MPK:</strong> {reply}
+                  <div className="reply">
+                    <strong>MPK:</strong> {reply}
+                  </div>
                 </div>
               ))}
             </div>

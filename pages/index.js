@@ -52,73 +52,61 @@ export default function Home() {
         {/* Home Page */}
         {currentPage === 'home' && (
           <div className="home">
-            <div style={{ width: '100px', height: '100px', position: 'fixed', top: '20px', left: '20px' }}>
+          {/* Logo SMAN 24 */}
+          <div className="logo-container logo-left">
+            <img
+              src="/assets/Logo_SMAN 24.png"
+              alt="Logo SMAN 24"
+              className="logo"
+            />
+          </div>
+        
+          {/* Logo MPK */}
+          <div className="logo-container logo-right">
+            <img
+              src="/assets/Logo_MPK.png"
+              alt="Logo MPK"
+              className="logo"
+            />
+          </div>
+        
+          {/* Header */}
+          <h1 className="header pressstart2p">MPK SMAN 24 BANDUNG</h1>
+        
+          {/* Buttons */}
+          <div className="button-container">
+            <button
+              className="button home-button glow-red"
+              onClick={() => showPage('aspirasi', '/assets/background3.png')}
+            >
+              Aspirasi Berkala
+            </button>
+            <button
+              className="button home-button glow-red"
+              onClick={() => showPage('pohon', '/assets/background2.png')}
+            >
+              Pohon Aspirasi
+            </button>
+          </div>
+        
+          {/* Social Buttons */}
+          <div className="social-buttons">
+            <div className="social-button-container" onClick={() => window.open('https://www.instagram.com/mpk_sman24bdg?igsh=MWNlaTBmMXA0Z2E5MQ==', '_blank')}>
               <img
-                src="/assets/Logo_SMAN 24.png"
-                alt="Logo SMAN 24"
-                className="logo logo-left"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain"
-                }} />
+                src="/assets/instagram_logo.png"
+                alt="Instagram"
+                className="social-button"
+              />
             </div>
-            <div style={{ width: '100px', height: '100px', position: 'fixed', top: '20px', right: '20px' }}>
+            <div className="social-button-container" onClick={() => window.open('https://youtube.com/@mpksman24bandung65?si=uGyKN8wO5-luLouR', '_blank')}>
               <img
-                src="/assets/Logo_MPK.png"
-                alt="Logo MPK"
-                className="logo logo-right"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain"
-                }} />
-            </div>
-            
-            <h1 className="header pressstart2p">MPK SMAN 24 BANDUNG</h1>
-
-            <div className="button-container">
-              <button 
-                className="button home-button glow-red" 
-                onClick={() => showPage('aspirasi', '/assets/background3.png')}
-              >
-                Aspirasi Berkala
-              </button>
-              <button 
-                className="button home-button glow-red" 
-                onClick={() => showPage('pohon', '/assets/background2.png')}
-              >
-                Pohon Aspirasi
-              </button>
-            </div>
-
-            <div className="social-buttons">
-              <div style={{ position: 'relative', width: '50px', height: '50px', cursor: 'pointer' }}>
-                <img
-                  src="/assets/instagram_logo.png"
-                  alt="Instagram"
-                  className="social-button"
-                  onClick={() => window.open('https://www.instagram.com/mpk_sman24bdg?igsh=MWNlaTBmMXA0Z2E5MQ==', '_blank')}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain"
-                  }} />
-              </div>
-              <div style={{ position: 'relative', width: '50px', height: '50px', cursor: 'pointer' }}>
-                <img
-                  src="/assets/youtube_logo.png"
-                  alt="YouTube"
-                  className="social-button"
-                  onClick={() => window.open('https://youtube.com/@mpksman24bandung65?si=uGyKN8wO5-luLouR', '_blank')}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain"
-                  }} />
-              </div>
+                src="/assets/youtube_logo.png"
+                alt="YouTube"
+                className="social-button"
+              />
             </div>
           </div>
+        </div>
         )}
 
         {/* Pohon Aspirasi Page */}

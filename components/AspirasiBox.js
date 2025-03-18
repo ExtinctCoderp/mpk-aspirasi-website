@@ -34,25 +34,25 @@ export default function AspirasiBox({ title, type, color }) {
     }
   };
 
-  return (
-    <div className="aspirasi-box">
-      <div className="aspirasi-header" style={{ backgroundColor: '#FFB6C1' }}>
-        <h2 className="header pressstart2p" style={{ color: color || '#239627', fontSize: '2rem' }}>
-          {title}
-        </h2>
-      </div>
-      <textarea
-        value={aspirasi}
-        onChange={(e) => setAspirasi(e.target.value)}
-        placeholder={`Tulis aspirasi Anda untuk ${type}...`}
-      />
-      <div 
-        className="submit-text" 
-        onClick={handleSubmit}
-        style={{ cursor: isSubmitting ? 'not-allowed' : 'pointer', opacity: isSubmitting ? 0.7 : 1 }}
-      >
-        {isSubmitting ? 'Mengirim...' : `Kirim Aspirasi ${type}`}
-      </div>
+return (
+  <div className="aspirasi-box">
+    <div className="aspirasi-header">
+      <h2 className="header pressstart2p" style={{ color: color || '#239627', fontSize: '2rem' }}>
+        {title}
+      </h2>
     </div>
-  );
+    <textarea
+      value={aspirasi}
+      onChange={(e) => setAspirasi(e.target.value)}
+      placeholder={`Tulis aspirasi Anda untuk ${type}...`}
+    />
+    <div 
+      className="submit-text" 
+      onClick={handleSubmit}
+      style={{ cursor: isSubmitting ? 'not-allowed' : 'pointer', opacity: isSubmitting ? 0.7 : 1 }}
+    >
+      {isSubmitting ? 'Mengirim...' : `Kirim Aspirasi ${type}!`}
+    </div>
+  </div>
+);
 }
