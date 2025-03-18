@@ -136,11 +136,7 @@ export default function Home() {
                 <img
                   src="/assets/content_1.png"
                   alt="Pohon Aspirasi Image"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <div className="image-caption glow-white">Wakasek Kurikulum</div>
+                  style={{ maxWidth: "100%", height: "auto" }} />
               </div>
             </div>
 
@@ -149,11 +145,7 @@ export default function Home() {
                 <img
                   src="/assets/content_2.png"
                   alt="Pohon Aspirasi Image"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <div className="image-caption glow-white">Wakasek Kurikulum</div>
+                  style={{ maxWidth: "100%", height: "auto" }} />
               </div>
               <div className="pohon-text pressstart2p">
                 Garda Madani SOLID
@@ -168,11 +160,7 @@ export default function Home() {
                 <img
                   src="/assets/content_3.png"
                   alt="Pohon Aspirasi Image"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <div className="image-caption glow-white">Wakasek Kurikulum</div>
+                  style={{ maxWidth: "100%", height: "auto" }}/>
               </div>
             </div>
 
@@ -181,11 +169,7 @@ export default function Home() {
                 <img
                   src="/assets/content_4.png"
                   alt="Pohon Aspirasi Image"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <div className="image-caption glow-white">Wakasek Sarpa</div>
+                  style={{ maxWidth: "100%", height: "auto" }} />
               </div>
               <div className="pohon-text pressstart2p">
                 Perluasan Area Kantin
@@ -200,11 +184,7 @@ export default function Home() {
                 <img
                   src="/assets/content_5.png"
                   alt="Pohon Aspirasi Image"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <div className="image-caption glow-white">Wakasek Sarpa</div>
+                  style={{ maxWidth: "100%", height: "auto" }} />
               </div>
             </div>
 
@@ -213,11 +193,7 @@ export default function Home() {
                 <img
                   src="/assets/content_6.png"
                   alt="Pohon Aspirasi Image"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <div className="image-caption glow-white">Wakasek Sarpa</div>
+                  style={{ maxWidth: "100%", height: "auto" }} />
               </div>
               <div className="pohon-text pressstart2p">
                 Perluasan Area Hijau Sekolah
@@ -232,11 +208,7 @@ export default function Home() {
                 <img
                   src="/assets/content_7.png"
                   alt="Pohon Aspirasi Image"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <div className="image-caption glow-white">Wakasek Sarpa</div>
+                  style={{ maxWidth: "100%", height: "auto" }} />
               </div>
             </div>
 
@@ -245,11 +217,8 @@ export default function Home() {
                 <img
                   src="/assets/content_8.png"
                   alt="Pohon Aspirasi Image"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <div className="image-caption glow-white">Wakasek Kurikulum</div>
+                  style={{ maxWidth: "100%", height: "auto" }} />
+                
               </div>
               <div className="pohon-text pressstart2p">
                 SOLID Literasi
@@ -272,12 +241,12 @@ export default function Home() {
             <h1 className="header shrikhand">Jangan ragu untuk MENYAMPAIKAN ASPIRASIMU!</h1>
             <div className="aspirasi-containers">
               <AspirasiBox 
-                title="Kirim Aspirasi untuk OSIS" 
+                title="Aspirasi untuk OSIS"    
                 type="OSIS" 
                 color="#239627" 
               />
               <AspirasiBox 
-                title="Kirim Aspirasi untuk Sekolah" 
+                title="Aspirasi untuk Sekolah" 
                 type="Sekolah" 
                 color="#239627" 
               />
@@ -295,27 +264,26 @@ export default function Home() {
 
         {/* Popup */}
         <Popup isOpen={showPopup} onClose={() => setShowPopup(false)}>
-          <div className="popup-header">
-            <h3>! NOTICE !</h3>
-          </div>
-          <div className="popup-body">
-            <h4>Email Anda akan terekam jika berhasil mengisi aspirasi.</h4><br></br>
-            <p>
-              <strong> 1. Isi Aspirasi Terbaikmu! </strong><br></br>
-              Sampaikan aspirasi dan masukan yang membangun untuk sekolah dan OSIS.<br></br><br></br>
-              <strong> 2. Kami Siap Mendengar & Menyampaikan </strong><br></br>
-              Setiap aspirasi yang kami terima akan ditampung dan diperjuangkan. <br></br><br></br>
-              <strong> 3. Peraturan Penulisan Aspirasi </strong><br></br>
-              Penyampaian aspirasi dilarang menggunakan emoji apapun.
-              Aspirasi harus ditulis dengan bahasa yang baik dan benar.
-              Tidak boleh mengandung SARA, ujaran kebencian, atau kata-kata kasar. <br></br><br></br>
-              <strong> 4. Penyaringan Aspirasi </strong><br></br>
-              Aspirasi yang mengandung SARA, ujaran kebencian, atau kata-kata kasar akan dihapus atau diperhalus agar sesuai dengan norma dan etika. <br></br><br></br>
-              Mari bersama menciptakan lingkungan sekolah yang lebih baik!
-              Terima kasih atas partisipasi anda!
-            </p>
-          </div>
-        </Popup>
+        <div className="popup-header"><h3 className="header pressstart2p">! NOTICE !</h3></div>
+        
+        <div className="popup-body">
+          <h4>Email Anda akan terekam jika berhasil mengisi aspirasi.</h4><br></br>
+          <p>
+            <strong> 1. Isi Aspirasi Terbaikmu! </strong><br></br>
+            Sampaikan aspirasi dan masukan yang membangun untuk sekolah dan OSIS.<br></br><br></br>
+            <strong> 2. Kami Siap Mendengar & Menyampaikan </strong><br></br>
+            Setiap aspirasi yang kami terima akan ditampung dan diperjuangkan. <br></br><br></br>
+            <strong> 3. Peraturan Penulisan Aspirasi </strong><br></br>
+            Penyampaian aspirasi dilarang menggunakan emoji apapun.
+            Aspirasi harus ditulis dengan bahasa yang baik dan benar.
+            Tidak boleh mengandung SARA, ujaran kebencian, atau kata-kata kasar. <br></br><br></br>
+            <strong> 4. Penyaringan Aspirasi </strong><br></br>
+            Aspirasi yang mengandung SARA, ujaran kebencian, atau kata-kata kasar akan dihapus atau diperhalus agar sesuai dengan norma dan etika. <br></br><br></br>
+            Mari bersama menciptakan lingkungan sekolah yang lebih baik!
+            Terima kasih atas partisipasi anda!
+          </p>
+        </div>
+      </Popup>
       </div>
     </>
   );

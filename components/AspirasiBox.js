@@ -36,21 +36,23 @@ export default function AspirasiBox({ title, type, color }) {
 
   return (
     <div className="aspirasi-box">
-      <h2 className="header pressstart2p" style={{ color: color || '#239627', fontSize: '2rem' }}>
-        {title}
-      </h2>
+      <div className="aspirasi-header" style={{ backgroundColor: '#FFB6C1' }}>
+        <h2 className="header pressstart2p" style={{ color: color || '#239627', fontSize: '2rem' }}>
+          {title}
+        </h2>
+      </div>
       <textarea
         value={aspirasi}
         onChange={(e) => setAspirasi(e.target.value)}
         placeholder={`Tulis aspirasi Anda untuk ${type}...`}
       />
-      <button 
-        className="button page-button" 
+      <div 
+        className="submit-text" 
         onClick={handleSubmit}
-        disabled={isSubmitting}
+        style={{ cursor: isSubmitting ? 'not-allowed' : 'pointer', opacity: isSubmitting ? 0.7 : 1 }}
       >
         {isSubmitting ? 'Mengirim...' : `Kirim Aspirasi ${type}`}
-      </button>
+      </div>
     </div>
   );
 }

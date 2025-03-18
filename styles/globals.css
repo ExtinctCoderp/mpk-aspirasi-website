@@ -77,11 +77,6 @@ body {
   text-align: center;
 }
 
-.aspirasi {
-  padding-top: 4rem;
-  min-height: 100vh;
-}
-
 .aspirasi-containers {
   display: flex;
   gap: 2rem;
@@ -99,6 +94,34 @@ body {
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: 2px solid #000; 
+  outline-offset: -2px; 
+}
+
+.aspirasi-header {
+  background-color: #ffeeee; 
+  padding: 1rem;
+  border-radius: 15px 15px 0 0;
+  margin: -2rem -2rem 1rem -2rem; 
+}
+
+.submit-text {
+  color: black;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.submit-text:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.pohon {
+  padding-top: 2rem;
 }
 
 .pohon {
@@ -137,13 +160,6 @@ body {
   height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.image-caption {
-  color: white;
-  font-size: 1.1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .comment-section {
@@ -174,14 +190,16 @@ body {
 .logo-reply { 
   width: 40px; 
   height: 40px; 
+  margin-top: 10px;
   margin-right: 10px; 
+  margin-left: 10px; 
   border-radius: 50%; 
 }
 
 .arrow { 
   width: 40px; 
   height: 40px; 
-  margin-left: 20px;
+  margin-left: 30px;
   padding: 10px; 
 }
 
@@ -194,8 +212,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;  /* Full viewport width */
-  height: 100vh; /* Full viewport height */
+  width: 100vw;  
+  height: 100vh; 
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -213,13 +231,13 @@ body {
 
 .popup-content {
   background: white;
-  padding: 0; /* Remove padding to handle it internally */
+  padding: 0; 
   border-radius: 1rem;
-  text-align: left; /* Align text to the left */
-  max-width: 500px; /* Fixed width for a square-like box */
-  width: 90%; /* Responsive width */
-  max-height: 70vh; /* Prevent overflow */
-  overflow-y: auto; /* Allow scrolling if content is too long */
+  text-align: left; 
+  max-width: 500px; 
+  width: 90%; 
+  max-height: 70vh; 
+  overflow-y: auto; 
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
   position: relative;
   transform: scale(0.9);
@@ -230,9 +248,8 @@ body {
   transform: scale(1);
 }
 
-/* Blue top bar for the notice */
 .popup-header {
-  background: #007bff; /* Blue color */
+  background: #9fbcf7;
   padding: 1rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -240,23 +257,22 @@ body {
 }
 
 .popup-header h3 {
-  color: white; /* White text for contrast */
-  margin: 0; /* Remove default margin */
+  color: black; 
+  margin: 0; 
   font-size: 1.25rem;
 }
 
-/* Close button styling */
 .close {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 0.7rem;
+  right: 0.7rem;
   font-size: 1.5rem;
   cursor: pointer;
   background: white;
-  border: 2px solid #666; /* Outline for the button */
-  border-radius: 0.25rem; /* Slightly rounded corners */
-  width: 2rem; /* Fixed width */
-  height: 2rem; /* Fixed height */
+  border: 2px solid #666; 
+  border-radius: 0.25rem; 
+  width: 2rem; 
+  height: 2rem; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,11 +285,9 @@ body {
   border-color: #000;
 }
 
-/* Content padding */
 .popup-body {
   padding: 1.5rem;
 }
-
 
 .button {
   padding: 1rem 2rem;
@@ -357,18 +371,82 @@ textarea {
   animation: glow-white 1s ease-in-out infinite alternate;
 }
 
+
 @media (max-width: 768px) {
+  .header {
+    font-size: clamp(1.5rem, 6vw, 3rem); /* Smaller font size for headers */
+    margin: 1rem 0;
+  }
+
+  .pohon-section {
+    flex-direction: column;
+    gap: 0.5rem; /* Further reduce the gap between text and image */
+    padding: 1rem; /* Reduce padding for better spacing */
+  }
+
+  .pohon-text {
+    order: 1; /* Ensure text appears first */
+    padding: 1rem; /* Reduce padding for better spacing */
+    font-size: clamp(1.5rem, 4vw, 2rem); /* Adjust font size for mobile */
+    margin-bottom: 0.5rem; /* Add margin below text to reduce space */
+  }
+
+  .pohon-image {
+    order: 2; /* Ensure image appears after text */
+    min-width: 100%; /* Ensure the image takes full width */
+    max-width: 100%;
+  }
+
+  .pohon-image img {
+    margin-bottom: 0; /* Remove margin below image */
+  }
+
+  .image-caption {
+    font-size: 1rem; /* Smaller font size for captions */
+  }
+
+  .button {
+    padding: 0.75rem 1.5rem; /* Smaller button padding */
+    font-size: 1rem; /* Smaller font size for buttons */
+  }
+
+  .container {
+    padding: 1rem; /* Reduce padding for containers */
+    width: 90%; /* Full width for containers */
+  }
+
+  .aspirasi-containers {
+    flex-direction: column; 
+    gap: 1rem;
+    padding: 0 1rem; 
+  }
+
+  .aspirasi-box {
+    min-width: 100%; 
+    padding: 1rem; 
+  }
+
   .popup-content {
     max-width: 90vw;
-    padding: 1.5rem;
   }
-  
-  .pohon-section {
-    padding: 1rem;
+
+  .popup-header h3 {
+    font-size: 1.1rem; 
   }
-  
-  .header {
-    margin: 1rem 0;
+
+  .popup-body {
+    padding: 1rem; 
+  }
+
+  .social-buttons {
+    bottom: 10px;
+    right: 10px;
+    gap: 10px; 
+  }
+
+  .social-button {
+    width: 40px; 
+    height: 40px;
   }
 }
 
