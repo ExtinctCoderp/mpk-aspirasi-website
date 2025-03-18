@@ -37,11 +37,11 @@ export default function CommentSection() {
     <div className="comment-section">
       <h3>Comment Section</h3>
       <div id="comments">
-        {/* Add a fallback empty array if comments is undefined or null */}
+        
         {(comments ?? []).length === 0 ? (
           <p>Belum ada komentar</p>
         ) : (
-          // Safely map over comments
+          
           (comments ?? []).map((comment, index) => (
             <div key={index} className="comment-box">
               <div className="comment">
@@ -61,7 +61,7 @@ export default function CommentSection() {
                 </div>
               </div>
               
-              {/* Safely map over replies */}
+              
               {(comment.respon ?? []).map((reply, replyIndex) => (
                 <div key={replyIndex} className="reply-container">
                   <div className="arrow">

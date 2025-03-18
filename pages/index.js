@@ -32,7 +32,7 @@ export default function Home() {
       <Head>
         <title>Website Aspirasi MPK SMAN 24 Bandung</title>
         <meta name="description" content="Website Aspirasi MPK SMAN 24 Bandung" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/mpk.ico"/>
       </Head>
       <div 
         className="background" 
@@ -49,6 +49,7 @@ export default function Home() {
         }}
       />
       <div className="page-wrapper">
+
         {/* Home Page */}
         {currentPage === 'home' && (
           <div className="home">
@@ -252,7 +253,7 @@ export default function Home() {
 
         {/* Popup */}
         <Popup isOpen={showPopup} onClose={() => setShowPopup(false)}>
-        <div className="popup-header"><h3 className="header pressstart2p">! NOTICE !</h3></div>
+        <div className="popup-header"><h3 className="pressstart2p">! NOTICE !</h3></div>
         
         <div className="popup-body">
           <h4>Email Anda akan terekam jika berhasil mengisi aspirasi.</h4><br></br>
