@@ -272,8 +272,8 @@ export default function Home() {
             <h1 className="header shrikhand">Jangan ragu untuk MENYAMPAIKAN ASPIRASIMU!</h1>
             <div className="aspirasi-containers">
               <AspirasiBox 
-                title="Kirim Aspirasi untuk MPK" 
-                type="MPK" 
+                title="Kirim Aspirasi untuk OSIS" 
+                type="OSIS" 
                 color="#239627" 
               />
               <AspirasiBox 
@@ -295,18 +295,26 @@ export default function Home() {
 
         {/* Popup */}
         <Popup isOpen={showPopup} onClose={() => setShowPopup(false)}>
-          <h3>Silakan isi aspirasi terbaikmu untuk sekolah dan OSIS!</h3><br/>
-          <p>
-            Kami AKAN MENAMPUNG DAN MEMPERJUANGKAN setiap masukan yang membangun. 
-            Jangan lupa untuk menuliskan aspirasi dengan bahasa yang baik dan benar, 
-            serta tidak mengandung SARA, ujaran kebencian, atau kata-kata kasar.
-          </p><br/>
-          <p>
-            Jika aspirasi yang dikirim mengandung SARA, ujaran kebencian, atau kata-kata kasar, 
-            maka akan kami hapus atau kami perhalus agar tetap sesuai dengan norma dan etika!
-          </p><br/>
-          <p><strong>Mari bersama menciptakan lingkungan sekolah yang lebih baik!</strong></p><br/>
-          <p>Terima kasih atas partisipasi ANDA!</p>
+          <div className="popup-header">
+            <h3>! NOTICE !</h3>
+          </div>
+          <div className="popup-body">
+            <h4>Email Anda akan terekam jika berhasil mengisi aspirasi.</h4><br></br>
+            <p>
+              <strong> 1. Isi Aspirasi Terbaikmu! </strong><br></br>
+              Sampaikan aspirasi dan masukan yang membangun untuk sekolah dan OSIS.<br></br><br></br>
+              <strong> 2. Kami Siap Mendengar & Menyampaikan </strong><br></br>
+              Setiap aspirasi yang kami terima akan ditampung dan diperjuangkan. <br></br><br></br>
+              <strong> 3. Peraturan Penulisan Aspirasi </strong><br></br>
+              Penyampaian aspirasi dilarang menggunakan emoji apapun.
+              Aspirasi harus ditulis dengan bahasa yang baik dan benar.
+              Tidak boleh mengandung SARA, ujaran kebencian, atau kata-kata kasar. <br></br><br></br>
+              <strong> 4. Penyaringan Aspirasi </strong><br></br>
+              Aspirasi yang mengandung SARA, ujaran kebencian, atau kata-kata kasar akan dihapus atau diperhalus agar sesuai dengan norma dan etika. <br></br><br></br>
+              Mari bersama menciptakan lingkungan sekolah yang lebih baik!
+              Terima kasih atas partisipasi anda!
+            </p>
+          </div>
         </Popup>
       </div>
     </>
