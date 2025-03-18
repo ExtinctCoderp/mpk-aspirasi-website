@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Image from "next/image";
 import Popup from '../components/Popup';
 import AspirasiBox from '../components/AspirasiBox';
 import CommentSection from '../components/CommentSection';
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('home');
-  const [background, setBackground] = useState('/assets/1.png');
+  const [background, setBackground] = useState('/assets/background1.png');
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
@@ -35,14 +34,27 @@ export default function Home() {
         <meta name="description" content="Website Aspirasi MPK SMAN 24 Bandung" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="background" style={{ backgroundImage: `url('${background}')` }}></div>
+      <div 
+        className="background" 
+        style={{ 
+          backgroundImage: `url(${background})`,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          zIndex: -1
+        }}
+      />
       <div className="page-wrapper">
         {/* Home Page */}
         {currentPage === 'home' && (
           <div className="home">
             <div style={{ width: '100px', height: '100px', position: 'fixed', top: '20px', left: '20px' }}>
               <img
-                src="/assets/Logo_MPK.png"
+                src="/assets/Logo_SMAN 24.png"
                 alt="Logo SMAN 24"
                 className="logo logo-left"
                 style={{
@@ -68,13 +80,13 @@ export default function Home() {
             <div className="button-container">
               <button 
                 className="button home-button glow-red" 
-                onClick={() => showPage('aspirasi', '/assets/3.png')}
+                onClick={() => showPage('aspirasi', '/assets/background3.png')}
               >
                 Aspirasi Berkala
               </button>
               <button 
                 className="button home-button glow-red" 
-                onClick={() => showPage('pohon', '/assets/2.png')}
+                onClick={() => showPage('pohon', '/assets/background2.png')}
               >
                 Pohon Aspirasi
               </button>
@@ -246,7 +258,7 @@ export default function Home() {
 
             <div className="pohon-section">
               <div className="container">
-                <button className="button page-button" onClick={() => showPage('home', '/assets/1.png')}>
+                <button className="button page-button" onClick={() => showPage('home', '/assets/background1.png')}>
                   Kembali ke Home
                 </button>
               </div>
@@ -272,7 +284,7 @@ export default function Home() {
             </div>
 
             <div className="container">
-              <button className="button page-button" onClick={() => showPage('home', '/assets/1.png')}>
+              <button className="button page-button" onClick={() => showPage('home', '/assets/background1.png')}>
                 Kembali ke Home
               </button>
             </div>

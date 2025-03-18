@@ -1,36 +1,32 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-export default function Popup({ isOpen, onClose, children }) {
+const Popup = ({ isOpen, onClose, children }) => {
   useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape') {
+    const handleEsc = (event) => {
+      if (event.keyCode === 27) {
         onClose();
       }
     };
-
+    
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
+      document.addEventListener('keydown', handleEsc);
     }
-
+    
     return () => {
-      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('keydown', handleEsc);
     };
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
-  const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
-
   return (
-    <div className="popup" style={{ display: 'flex' }} onClick={handleBackdropClick}>
-      <div className="popup-content">
-        <span className="close" onClick={onClose}>&times;</span>
+    <div className={`popup ${isOpen ? 'open' : ''}`} onClick={onClose}>
+      <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+        <button className="close" onClick={onClose}>×</button>
         {children}
       </div>
     </div>
   );
-}
+};
+
+export default Popup;
