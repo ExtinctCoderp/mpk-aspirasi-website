@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 
 const CommentSchema = new mongoose.Schema({
   aspirasi: String,
-  respon: [String]
+  respon: String,
+  ps : [String]
 }, {
   timestamps: true
 });
