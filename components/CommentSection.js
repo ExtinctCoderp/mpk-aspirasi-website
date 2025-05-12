@@ -85,8 +85,15 @@ export default function CommentSection() {
                         objectFit: "cover"
                       }} />
                   </div>
-                  <div className="reply">
-                    <strong>MPK:</strong> {reply}
+                  <div>
+                    <div className="reply">
+                      <strong>MPK:</strong> {reply}
+                    </div>
+                    {comment.ps && (
+                      <div className="ps-comment">
+                        <em>P.S. {comment.ps}</em>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
