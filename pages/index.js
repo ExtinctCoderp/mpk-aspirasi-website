@@ -118,102 +118,125 @@ export default function Home() {
             </div>
             
             <div className="pohon-section">
-              <div className="pohon-text pressstart2p">
-                Menyalurkan minat dan bakat bagi siswa melalui pengadaan lomba
-              </div>
-              <div className="pohon-image">
-                <img
-                  src="/assets/content_1.png"
-                  alt="Pohon Aspirasi Image"
-                  style={{ maxWidth: "100%", height: "auto" }} />
-              </div>
+            <div className="pohon-text pressstart2p">
+              Menyalurkan minat dan bakat bagi siswa melalui pengadaan lomba
+            </div>
+            <div className="pohon-image">
+            <img
+              src="/assets/content_1.png"
+              alt="Pohon Aspirasi Image"
+              style={{ maxWidth: "100%", height: "auto" }} />
+            </div>
             </div>
 
             <div className="pohon-section">
-              <div className="pohon-image">
-                <img
-                  src="/assets/content_2.png"
-                  alt="Pohon Aspirasi Image"
-                  style={{ maxWidth: "100%", height: "auto" }} />
-              </div>
-              <div className="pohon-text pressstart2p">
-                Garda Madani SOLID
-              </div>
+            <div className="pohon-image">
+            <img
+              src="/assets/content_2.png"
+              alt="Pohon Aspirasi Image"
+              style={{ maxWidth: "100%", height: "auto" }} />
+            </div>
+            <div className="pohon-text pressstart2p">
+              Garda Madani SOLID
+            </div>
             </div>
 
             <div className="pohon-section">
-              <div className="pohon-text pressstart2p">
-                Pengoptimalan program P5
-              </div>
-              <div className="pohon-image">
-                <img
-                  src="/assets/content_3.png"
-                  alt="Pohon Aspirasi Image"
-                  style={{ maxWidth: "100%", height: "auto" }}/>
-              </div>
+            <div className="pohon-text pressstart2p">
+              Pengoptimalan program P5
+            </div>
+            <div className="pohon-image">
+            <img
+              src="/assets/content_3.png"
+              style={{ maxWidth: "100%", height: "auto" }}/>
+              alt="Pohon Aspirasi Image"
+            </div>
             </div>
 
             <div className="pohon-section">
-              <div className="pohon-image">
-                <img
-                  src="/assets/content_4.png"
-                  alt="Pohon Aspirasi Image"
-                  style={{ maxWidth: "100%", height: "auto" }} />
-              </div>
-              <div className="pohon-text pressstart2p">
-                Perluasan Area Kantin
-              </div>
+            <div className="pohon-image">
+              <img
+              src="/assets/content_4.png"
+              alt="Pohon Aspirasi Image"
+              style={{ maxWidth: "100%", height: "auto" }} />
+            </div>
+            <div className="pohon-text pressstart2p">
+              Perluasan Area Kantin
+            </div>
             </div>
 
             <div className="pohon-section">
-              <div className="pohon-text pressstart2p">
-                Perbaikan Keramik Pada Tangga
-              </div>
-              <div className="pohon-image">
-                <img
-                  src="/assets/content_5.png"
-                  alt="Pohon Aspirasi Image"
-                  style={{ maxWidth: "100%", height: "auto" }} />
-              </div>
+            <div className="pohon-text pressstart2p">
+              Perbaikan Keramik Pada Tangga
+            </div>
+            <div className="pohon-image">
+            <img
+              src="/assets/content_5.png"
+              alt="Pohon Aspirasi Image"
+              style={{ maxWidth: "100%", height: "auto" }} />
+            </div>
             </div>
 
             <div className="pohon-section">
-              <div className="pohon-image">
-                <img
-                  src="/assets/content_6.png"
-                  alt="Pohon Aspirasi Image"
-                  style={{ maxWidth: "100%", height: "auto" }} />
-              </div>
-              <div className="pohon-text pressstart2p">
-                Perluasan Area Hijau Sekolah
-              </div>
+            <div className="pohon-image">
+            <img
+              src="/assets/content_6.png"
+              alt="Pohon Aspirasi Image"
+              style={{ maxWidth: "100%", height: "auto" }} />
+            </div>
+            <div className="pohon-text pressstart2p">
+              Perluasan Area Hijau Sekolah
+            </div>
             </div>
 
             <div className="pohon-section">
-              <div className="pohon-text pressstart2p">
-                Pengadaan 3 Jenis Tempat Sampah
-              </div>
-              <div className="pohon-image">
-                <img
-                  src="/assets/content_7.png"
-                  alt="Pohon Aspirasi Image"
-                  style={{ maxWidth: "100%", height: "auto" }} />
-              </div>
+            <div className="pohon-text pressstart2p">
+              Pengadaan 3 Jenis Tempat Sampah
+            </div>
+            <div className="pohon-image">
+            <img
+              src="/assets/content_7.png"
+              alt="Pohon Aspirasi Image"
+              style={{ maxWidth: "100%", height: "auto" }} />
+            </div>
             </div>
 
             <div className="pohon-section">
-              <div className="pohon-image">
-                <img
-                  src="/assets/content_8.png"
-                  alt="Pohon Aspirasi Image"
-                  style={{ maxWidth: "100%", height: "auto" }} />
-                
-              </div>
-              <div className="pohon-text pressstart2p">
-                SOLID Literasi
-              </div>
+            <div className="pohon-image">
+            <img
+              src="/assets/content_8.png"
+              alt="Pohon Aspirasi Image"
+              style={{ maxWidth: "100%", height: "auto" }} />
+            </div>
+            <div className="pohon-text pressstart2p">
+              SOLID Literasi
+            </div>
             </div>
 
+            <div className="pohon-section">
+            <div className="pohon-text pressstart2p">
+              Keramik diperbaiki
+            </div>
+            <div className="pohon-image">
+            <img
+              src="/assets/content_9.png"
+              alt="Pohon Aspirasi Image"
+              style={{ maxWidth: "100%", height: "auto" }} />
+            </div>
+            </div>
+
+            <div className="pohon-section">
+            <div className="pohon-image">
+            <img
+              src="/assets/content_10.png"
+              alt="Pohon Aspirasi Image"
+              style={{ maxWidth: "100%", height: "auto" }} />
+            </div>
+            <div className="pohon-text pressstart2p">
+              Ruang penghijauan disekolah
+            </div>
+            </div>
+  
             <div className="pohon-section">
               <div className="container">
                 <button className="button page-button" onClick={() => showPage('home', '/assets/background1.png')}>

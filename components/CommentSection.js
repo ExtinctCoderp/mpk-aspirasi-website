@@ -20,7 +20,6 @@ export default function CommentSection() {
 
     fetchComments();
     const interval = setInterval(fetchComments, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -37,11 +36,9 @@ export default function CommentSection() {
     <div className="comment-section">
       <h3>Comment Section</h3>
       <div id="comments">
-        
         {(comments ?? []).length === 0 ? (
           <p>Belum ada komentar</p>
         ) : (
-          
           (comments ?? []).map((comment, index) => (
             <div key={index} className="comment-box">
               <div className="comment">
@@ -58,10 +55,13 @@ export default function CommentSection() {
                 </div>
                 <div>
                   <strong>Radupat:</strong> {comment.aspirasi}
+                  {comment.ps && (
+                    <div className="ps-comment">
+                      <em>P.S. {comment.ps}</em>
+                    </div>
+                  )}
                 </div>
               </div>
-              
-              
               {(comment.respon ?? []).map((reply, replyIndex) => (
                 <div key={replyIndex} className="reply-container">
                   <div className="arrow">
