@@ -55,11 +55,6 @@ export default function CommentSection() {
                 </div>
                 <div>
                   <strong>Radupat:</strong> {comment.aspirasi}
-                  {comment.ps && (
-                    <div className="ps-comment">
-                      <em>P.S. {comment.ps}</em>
-                    </div>
-                  )}
                 </div>
               </div>
               {(comment.respon ?? []).map((reply, replyIndex) => (
@@ -88,7 +83,8 @@ export default function CommentSection() {
                   <div>
                     <div className="reply">
                       <strong>MPK:</strong> {reply}
-                    </div>
+                    </div> 
+                    
                     {comment.ps && (
                       <div className="ps-comment">
                         <em>P.S. {comment.ps}</em>
