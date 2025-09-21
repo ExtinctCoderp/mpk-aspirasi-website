@@ -27,24 +27,24 @@ export default function CommentSection() {
 
   if (loading) {
     return (
-      <div className="w-full max-w-4xl mx-auto p-4">
-        <h3 className="text-xl font-bold mb-4 text-gray-800">Comment Section</h3>
+      <div className="w-full max-w-4xl mx-auto mt-8 mb-8 bg-white rounded-lg shadow-lg border border-gray-200 p-4 sm:p-6">
+        <h3 className="text-lg sm:text-xl font-bold mb-4 text-gray-800">Comment Section</h3>
         <p className="text-gray-600">Memuat komentar...</p>
       </div>
     )
   }
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
-      <h3 className="text-xl font-bold mb-6 text-gray-800">Comment Section</h3>
-      <div className="space-y-6">
+    <div className="w-full max-w-4xl mx-auto mt-8 mb-8 bg-white rounded-lg shadow-lg border border-gray-200 p-4 sm:p-6">
+      <h3 className="text-lg sm:text-xl font-bold mb-6 text-gray-800">Comment Section</h3>
+      <div className="space-y-4 sm:space-y-6">
         {(comments ?? []).length === 0 ? (
-          <p className="text-gray-600 text-center py-8">Belum ada komentar</p>
+          <p className="text-gray-600 text-center py-6 sm:py-8">Belum ada komentar</p>
         ) : (
           (comments ?? []).map((comment, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6">
+            <div key={index} className="bg-gray-50 rounded-lg border border-gray-100 p-3 sm:p-4">
               {/* Main Comment */}
-              <div className="flex gap-3 sm:gap-4 mb-4">
+              <div className="flex gap-2 sm:gap-3 mb-3 sm:mb-4">
                 <div className="flex-shrink-0">
                   <Image
                     src="/assets/radupat.png"
@@ -64,8 +64,8 @@ export default function CommentSection() {
 
               {/* Replies */}
               {(comment.respon ?? []).map((reply, replyIndex) => (
-                <div key={replyIndex} className="ml-4 sm:ml-6 mt-4">
-                  <div className="flex gap-2 sm:gap-3 items-start">
+                <div key={replyIndex} className="ml-3 sm:ml-4 mt-3 sm:mt-4">
+                  <div className="flex gap-2 items-start">
                     {/* Arrow */}
                     <div className="flex-shrink-0 mt-1">
                       <Image
@@ -73,7 +73,7 @@ export default function CommentSection() {
                         alt="Arrow"
                         width={20}
                         height={20}
-                        className="object-contain w-4 h-4 sm:w-5 sm:h-5"
+                        className="object-contain w-3 h-3 sm:w-4 sm:h-4"
                       />
                     </div>
 
@@ -84,7 +84,7 @@ export default function CommentSection() {
                         alt="MPK"
                         width={32}
                         height={32}
-                        className="rounded-full object-cover w-7 h-7 sm:w-8 sm:h-8"
+                        className="rounded-full object-cover w-6 h-6 sm:w-8 sm:h-8"
                       />
                     </div>
 
@@ -112,3 +112,4 @@ export default function CommentSection() {
     </div>
   )
 }
+
